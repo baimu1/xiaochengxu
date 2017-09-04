@@ -1,0 +1,46 @@
+
+.scroll-view-item{
+  display: flex;
+  font-size: 14px;
+  height: 160px;
+  border-top: 1px solid #f5f5f5;
+}
+
+/* 左 */
+.myVideo{
+  display: flex;
+  flex: 5;
+   width: 100px;
+   height: 160px;
+  justify-content: center;
+  align-items: center;
+}
+
+.myVideo image{
+  width: 90px;
+  height: 140px;
+}
+
+/* 右 */
+ .movieTitle{ 
+   margin:10px  5px;
+   flex: 10;
+} 
+
+ 
+
+.movieName{
+  font-weight: bold;
+}
+.casts{
+  display: flex;
+}
+.castsTitle{
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.castsName{
+
+}

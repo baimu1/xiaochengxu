@@ -1,0 +1,45 @@
+<scroll-view scroll-y  
+    bindscrolltoupper="upper" 
+    bindscrolltolower="lower" 
+    bindscroll="scroll" 
+     scroll-into-view="{{toView}}"  
+    scroll-top="{{scrollTop}}">
+
+    <view class="scroll-view-item"
+       wx:for="{{movieList}}" wx:for-item="movie" wx:for-index="i"
+        wx:key="{{i}}">
+      <view class="myVideo">
+         <image src="{{movie.images.large}}"></image>
+        <!-- <video id="myVideo"        
+            src="{{movie.alt}}"
+            poster="{{movie.images.large}}"
+            danmu-list="{{danmuList}}" 
+            enable-danmu danmu-btn controls>
+        </video>  -->
+      </view>
+       
+      <view class="movieTitle">
+         <view class="movieName">影片:{{movie.title}}</view>
+        
+         <view>导演:{{movie.directors[0].name}}</view>       
+         
+         <view class="casts" style="height:50px">
+            <view class="castsTitle">主演：</view>
+            <view class="castsName">
+              <view
+                wx:for="{{movie.casts}}" 
+                wx:for-item="casts" 
+                wx:for-index="i"
+                wx:key="{{i}}"> 
+                  {{casts.name}}
+              </view>
+            </view>
+        </view>  
+      
+        <view>年代:{{movie.year}}</view>
+        <view>影片类型:{{movie.genres}}</view>
+        <view>评分:{{movie.rating.average}}</view>
+   
+      </view>
+    </view>
+  </scroll-view>

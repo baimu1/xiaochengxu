@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/movie/movie",
+    "pages/music/music",
+    "pages/new/new",
+    "pages/my/my",
+    "pages/newdetail/newdetail",
+    "pages/musicdetail/musicdetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信小程序示例",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#8a8a8a",
+    "backgroundColor":"#e6e6e6",
+    "selectedColor":"#2c2c2c",
+    "borderStyle":"white",
+    "list": [
+      { 
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath":"icons/selectedhome.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "icons/movie.png",
+        "selectedIconPath": "icons/selectedmovie.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath": "icons/music.png",
+        "selectedIconPath": "icons/selectedmusic.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "新闻",
+        "iconPath": "icons/new.png",
+        "selectedIconPath": "icons/selectednew.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/selectedmy.png"
+      }
+    ]
+  }
+  
+}

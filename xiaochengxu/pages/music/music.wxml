@@ -1,0 +1,44 @@
+<view class="view_audio">
+    <audio poster="{{music.songinfo.pic_small}}" 
+      name="{{music.songinfo.title}}" 
+      author="{{music.songinfo.author}}" 
+      src="{{music.bitrate.show_link}}" 
+      bindtimeupdate="changMusicLrc"
+      bindended="playNextMusic"
+      id="myAudio" 
+      controls>
+    </audio>
+
+    <progress  percent = "{{musicPercent}}" show-info />
+    <view>{{musicLineLrc}}</view>
+    
+</view>
+<button bindtap="seek">快进</button>
+
+<scroll-view scroll-y
+  style="height:{{scrollHeight}}px;"
+  bindscrolltoupper="upper" 
+  bindscrolltolower="loadMore" 
+  bindscroll="scroll" 
+  scroll-top="{{scrollTop}}">
+    <view class="songList" wx:for="{{songList}}"  wx:for-index="i" wx:for-item="song" wx:key="{{i}}">
+         <view class="imgBox" id="{{song.song_id}}" bindtap="tiao">
+            <image src="{{song.pic_small}}" class="songImage" ></image>
+         </view>
+
+         <view class="songText">
+           <view class="songTitle">{{song.title}}</view>
+           <view class="songAuthor">{{song.author}}</view>
+           <view class="songInfo">{{song.info}}</view>
+         </view>
+
+         <view class="playIcon">
+            <image class="playImg" 
+                src="/icons/play.png"
+                bindtap="playMusic"
+                data-songid="{{song.song_id}}">
+            </image>
+         </view>
+    </view>
+
+</scroll-view>

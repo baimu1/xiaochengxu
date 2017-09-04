@@ -1,0 +1,27 @@
+
+.scroll-view-item{
+  display: flex;
+  border-top: 1px solid #f5f5f5;
+}
+
+.imgBox{
+  width: 90px;
+  height:90px; 
+  flex: 5; 
+}
+
+ .newImage{
+  width: 80px;
+  height: 80px;
+  margin:5px;
+} 
+
+.newText{
+  font-size: 13px;
+  flex: 15;
+  margin-left: 5px;
+}
+
+.newText view{
+  margin-top: 5px;
+}

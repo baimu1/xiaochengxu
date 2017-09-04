@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item  class="swiper">
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+  
+<!-- 电影专场 -->
+<view class="section section_gap">
+  <view class="section__title">电影专场</view>
+ 
+  <scroll-view class="scroll-view_W" scroll-x="true"
+        bindscrolltoupper="upper" 
+        bindscrolltolower="lower" 
+        bindscroll="scroll" 
+        scroll-left="{{scrollLeft}}">
+    <view  class="scroll-view-item_W"
+         wx:for="{{movieList}}" wx:for-item="movie" 
+         wx:for-index="i"  wx:key="{{i}}">
+        <image src="{{movie.images.large}}"></image>
+    </view>
+  </scroll-view>
+  
+</view>    
+
+<!-- 音乐专场 -->
+  <view class="section">
+  <view class="section__title">音乐专场</view>
+  <scroll-view class="scroll-view_H" scroll-y style="height:200px;" 
+        bindscrolltoupper="upper" 
+        bindscrolltolower="lower" 
+        bindscroll="scroll" 
+        scroll-top="{{scrollTop}}">
+    <view class="songList"
+     wx:for="{{songList}}"  wx:for-index="i" wx:for-item="song" wx:key="{{i}}">
+        <image src="{{song.pic_big}}" class="songImage"></image>
+    </view>
+  </scroll-view>
+ </view> 
+
+ <view class="classname">
+    <view class="section__title">新闻专场</view>
+    <scroll-view class="scroll-view_H2" scroll-y style="height:200px;" 
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower" 
+    bindscroll="scroll" 
+    scroll-into-view="{{toView}}" 
+    scroll-top="{{scrollTop}}">
+
+    <view class="scroll-view-item"
+       wx:for="{{newList}}">
+            <image id="{{item.id}}" 
+              src="{{item.pic_url}}" 
+              class="newImage"></image>
+    </view>
+  </scroll-view>
+ </view>
+
+

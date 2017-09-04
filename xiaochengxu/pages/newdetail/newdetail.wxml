@@ -1,0 +1,12 @@
+<view class="img">
+  <image src="{{newList.pic_url}}"></image>
+</view>
+<view class="view_text" style="font-weight:bold;">
+    {{newList.name}}  
+</view>
+<view class="view_text">
+    {{newList.short_description}}
+</view>
+<view class="view_text">
+    {{newList.description}}
+</view>

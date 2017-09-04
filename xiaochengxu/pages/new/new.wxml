@@ -1,0 +1,26 @@
+
+<scroll-view scroll-y style="height:{{scrollHeight}}px;" 
+    bindscrolltoupper="upper"
+    bindscrolltolower="loadMore" 
+    bindscroll="scroll" 
+    scroll-into-view="{{toView}}" 
+    scroll-top="{{scrollTop}}">
+
+    <view class="scroll-view-item"
+       wx:for="{{newList}}">
+    
+        <view class="imgBox"
+        id="{{item.id}}"
+        bindtap="tiao" >
+            <image src="{{item.pic_url}}" 
+            class="newImage"></image>
+        </view>
+
+        <view class="newText">
+          <view class="Name">{{item.name}}</view>
+          <view class="Description">{{item.short_description}}</view>
+        </view>
+    
+    </view>
+  </scroll-view>
+

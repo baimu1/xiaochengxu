@@ -1,0 +1,27 @@
+<!--pages/user/user.wxml-->
+<view class="content">
+  <view class="userInfo">
+    <image src="{{userInfo.avatarUrl}}" class="userImg"></image>
+    <view class="myName">{{userInfo.nickName}}</view>
+  </view>
+  <view class="myMovie">
+    <image src="/icons/movie1.png" class="movieImg"></image>
+    <view class="movieName">我的影视</view>
+  </view>
+  <view class="myMusic">
+    <image src="/icons/music1.png" class="musicImg"></image>
+    <view class="musicName">我的音乐</view>
+  </view>
+  <view class="myMjilu">
+    <image src="/icons/record.png" class="jiluImg"></image>
+    <view class="jiluName">播放记录</view>
+  </view>
+  <view class="myMshou">
+    <image src="/icons/collection.png" class="shouImg"></image>
+    <view class="shouName">我的收藏</view>
+  </view>
+  <view class="settings">
+    <image src="/icons/setting.png" class="setImg"></image>
+    <view class="setName">设置</view>
+  </view>
+</view>

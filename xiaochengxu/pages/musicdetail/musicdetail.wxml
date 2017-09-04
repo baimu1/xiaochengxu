@@ -1,0 +1,44 @@
+<view class="songList">
+      
+    <audio poster="{{detail.pic_small}}" 
+      name="{{detail.title}}" 
+      author="{{detail.author}}" 
+      src="{{url}}"
+      id="myAudio" 
+      controls loop>
+    </audio>
+
+</view>
+
+<scroll-view scroll-y
+  style="height:{{scrollHeight}}px;"
+  bindscrolltoupper="upper" 
+  bindscrolltolower="loadMore" 
+  bindscroll="scroll" 
+  scroll-top="{{scrollTop}}">
+      <view class="songLrc" wx:for="{{musicLrc}}">
+          {{item}}
+      </view>
+
+</scroll-view>
+
+
+
+
+ <!-- <view class="imgBox">
+           <image src="{{detail.pic_small}}" class="songImage" ></image>
+         </view> 
+
+         <view class="songText">
+           <view class="songTitle">{{detail.title}}</view>
+           <view class="songAuthor">{{detail.author}}</view>
+         </view>
+
+         <view class="playIcon">
+            <image class="playImg" 
+                id="myAudio"
+                src="/icons/play.png"
+                bindtap="playMusic"
+                data-songid="{{detail.song_id}}">
+            </image>
+         </view> -->

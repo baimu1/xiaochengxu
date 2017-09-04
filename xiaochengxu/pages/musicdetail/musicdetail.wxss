@@ -1,0 +1,71 @@
+.songList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+#myAudio{
+  width: 98%;
+}
+
+.songLrc{
+  width: 96%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imgBox{
+  width: 80px;
+  height:80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 9;
+}
+
+.songImage{
+  width: 70px;
+  height: 70px;
+   border-radius:70px 70px;
+  background: gray;
+}
+
+.songText{
+  flex: 20;
+  font-size: 13px;
+}
+.songText view{
+    margin-top: 5px;
+}
+.playIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   flex: 5;
+}
+
+ .playImg{
+  width: 30px;
+  height: 30px;
+} 
